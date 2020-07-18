@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: #8ab2f2"
+            fx:controller="adamichocka.TransferController"
+            maxHeight="300" maxWidth="500" prefHeight="300" prefWidth="500">
+
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="PRZELEW" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                   GridPane.columnSpan="2"
+                   style="-fx-font: System bold; -fx-text-alignment: center; -fx-font-size: 40"/>
+            <Label text="Login użytkownika: " GridPane.rowIndex="1" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #8ab2f2; -fx-font-size: 20"/>
+            <Label fx:id="userLoginTextArea" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                   style="-fx-control-inner-background: #8ab2f2; -fx-font-size: 20"/>
+            <Label text="Data transakcji: " GridPane.rowIndex="2" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #8ab2f2;-fx-font-size: 20"/>
+            <Label fx:id="dateTextArea" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                   style="-fx-control-inner-background: #8ab2f2; -fx-font-size: 20"/>
+            <Label text="Login odbiorcy: " GridPane.rowIndex="3" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #8ab2f2; -fx-font-size: 20"/>
+            <TextField fx:id="receiverLoginTextField" GridPane.rowIndex="3" GridPane.columnIndex="1"
+                       />
+            <Label text="Kwota: " GridPane.rowIndex="4" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #8ab2f2;-fx-font-size: 20"/>
+            <TextField fx:id="amountField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

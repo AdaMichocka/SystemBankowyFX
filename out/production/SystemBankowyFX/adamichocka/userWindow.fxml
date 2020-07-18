@@ -1,0 +1,75 @@
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<BorderPane fx:id="mainUserBorderPane" fx:controller="adamichocka.UserController"
+            xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: #34eb98" prefHeight="650" prefWidth="1150">
+
+    <top>
+        <VBox>
+            <ToolBar>
+                <HBox>
+                    <Button text="Wpłata" onAction="#showNewDepositDialog"/>
+                    <Separator/>
+                    <Button text="Wypłata" onAction="#showNewWithdrawalDialog"/>
+                    <Separator/>
+                    <Button text="Przelew" onAction="#showNewTransferDialog"/>
+                    <Separator/>
+                    <Button text="Sortuj po dacie" onAction="#showSortedByData"/>
+                    <Separator/>
+                    <Button text="Sortuj po typie" onAction="#showSortedByType"/>
+                    <Separator/>
+                    <Button text="Zmiana hasła" onAction="#showChangePasswordDialog"/>
+                    <Separator/>
+                    <Button text="Wyloguj" onAction="#logOut"/>
+                </HBox>
+            </ToolBar>
+        </VBox>
+
+    </top>
+    <left>
+        <ListView fx:id="transactionListView" style="-fx-control-inner-background: #52f2aa">
+
+        </ListView>
+    </left>
+    <center>
+        <VBox style="-fx-font-size: 20; -fx-font: normal">
+            <HBox>
+                <Label text="Szczegóły transakcji: ">
+                    <font>
+                        <Font name="System bold" size="40"/>
+                    </font>
+                </Label>
+            </HBox>
+            <TextArea fx:id="transactionDetailsTextArea" VBox.vgrow="SOMETIMES"
+                      style="-fx-control-inner-background: #8df2c4">
+            </TextArea>
+        </VBox>
+    </center>
+    <right>
+        <VBox style="-fx-background-color: #34eb98">
+            <Label text="Konto:" style="-fx-background-color: #34eb98">
+                <font>
+                    <Font name="System bold" size="40"/>
+                </font>
+            </Label>
+            <TextArea fx:id="userData" VBox.vgrow="SOMETIMES"
+                      style="-fx-control-inner-background: #52f2aa">
+            </TextArea>
+        </VBox>
+    </right>
+
+</BorderPane>

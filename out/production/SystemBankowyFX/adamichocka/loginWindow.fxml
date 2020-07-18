@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<BorderPane fx:id="loginBorderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="adamichocka.LoginController" style="-fx-background-color: #39b5ff" >
+    <top>
+        <Label text="LOGOWANIE" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="2" textAlignment="CENTER">
+            <font>
+                <Font name="System bold" size="40"/>
+            </font>
+        </Label>
+    </top>
+    <center>
+        <GridPane >
+            <RadioButton fx:id="userButton" selected="true" text="UŻYTKOWNIK" textFill="WHITE" GridPane.rowIndex="2">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+                <toggleGroup>
+                    <ToggleGroup fx:id="UserOrAdmin"/>
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="adminButton" text="ADMINISTRATOR" textFill="WHITE" toggleGroup="$UserOrAdmin">
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
+            </RadioButton>
+
+            <Label text="" GridPane.rowIndex="3" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #39b5ff; -fx-font-size: 20"/>
+
+            <Label text="Login: " GridPane.rowIndex="4" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #39b5ff; -fx-font-size: 20"/>
+            <TextField fx:id="loginTextField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <Label text="" GridPane.rowIndex="5" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #39b5ff; -fx-font-size: 20"/>
+
+            <Label text="Hasło: " GridPane.rowIndex="6" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #39b5ff;-fx-font-size: 20"/>
+            <PasswordField fx:id="passwordTextField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+            <Label text="" GridPane.rowIndex="7" GridPane.columnIndex="1"
+                   style="-fx-control-inner-background: #39b5ff; -fx-font-size: 20"/>
+
+            <Button text="ZALOGUJ" GridPane.rowIndex="8" onAction="#login" textAlignment="CENTER" />
+
+
+        </GridPane>
+    </center>
+</BorderPane>

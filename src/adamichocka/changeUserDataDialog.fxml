@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="adamichocka.ChangeUserDataController"  style="-fx-background-color: #eacbf2"
+            maxHeight="500" maxWidth="700" prefHeight="500" prefWidth="700">
+
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="ZMIANA DANYCH UŻYTKOWNIKA" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                   GridPane.columnSpan="3"
+                   style="-fx-font: System bold; -fx-text-alignment: center; -fx-font-size: 30"/>
+
+            <Label text="Login użytkownika: " GridPane.rowIndex="1" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #eacbf2; -fx-font-size: 20"/>
+            <Label fx:id="loginLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                   style="-fx-control-inner-background: #eacbf2; -fx-font-size: 20"/>
+
+            <Label text="Numer konta: " GridPane.rowIndex="2" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #eacbf2;-fx-font-size: 20"/>
+            <Label fx:id="accountNumberLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"
+                   style="-fx-control-inner-background: #eacbf2; -fx-font-size: 20"/>
+
+            <Label text="Imię: " GridPane.rowIndex="3" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #eacbf2; -fx-font-size: 20"/>
+            <Label fx:id="firstNameLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"
+                   style="-fx-control-inner-background: #eacbf2; -fx-font-size: 20"/>
+            <TextField fx:id="firstNameField" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+
+            <Label text="Nazwisko: " GridPane.rowIndex="4" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #eacbf2; -fx-font-size: 20"/>
+            <Label fx:id="lastNameLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"
+                   style="-fx-control-inner-background: #eacbf2; -fx-font-size: 20"/>
+            <TextField fx:id="lastNameField" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+
+            <Label text="Hasło: " GridPane.rowIndex="5" GridPane.columnIndex="0"
+                   style="-fx-control-inner-background: #eacbf2; -fx-font-size: 20"/>
+            <Label fx:id="passwordLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"
+                   style="-fx-control-inner-background: #eacbf2; -fx-font-size: 20"/>
+            <TextField fx:id="passwordField" GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+        </GridPane>
+    </content>
+
+</DialogPane>

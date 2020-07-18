@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="mainAdminBorderPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="adamichocka.AdminController" style="-fx-background-color: #ce58f5">
+    <Label text="To jest okno admina"/>
+
+    <top>
+        <VBox>
+            <ToolBar>
+                <HBox>
+                    <Button text="Nowy Użytkownik" onAction="#showNewUserDialog"/>
+                    <Separator/>
+                    <Button text="Sortowanie Użytkowników po nazwisku" onAction="#showSortedUsers"/>
+                    <Separator/>
+                    <Button text="Wyloguj" onAction="#logOut"/>
+                </HBox>
+            </ToolBar>
+        </VBox>
+
+    </top>
+    <left>
+        <ListView fx:id="usersListView" style="-fx-control-inner-background: #e6a4f5">
+
+        </ListView>
+    </left>
+    <center>
+        <VBox style="-fx-font-size: 20; -fx-font: normal">
+            <HBox>
+                <Label text="Szczegóły Użytkownika: ">
+                    <font>
+                        <Font name="System bold" size="30"/>
+                    </font>
+                </Label>
+            </HBox>
+            <TextArea fx:id="userDetailsTextArea" VBox.vgrow="SOMETIMES"
+                      style="-fx-control-inner-background: #dc86f0">
+            </TextArea>
+        </VBox>
+    </center>
+    <right>
+        <VBox style="-fx-background-color: #ce58f5">
+            <Label text="Konto Administratora:" style="-fx-background-color: #ce58f5">
+                <font>
+                    <Font name="System bold" size="30"/>
+                </font>
+            </Label>
+            <TextArea fx:id="adminData" VBox.vgrow="SOMETIMES"
+                      style="-fx-control-inner-background: #ce58f5">
+            </TextArea>
+        </VBox>
+    </right>
+
+</BorderPane>
